@@ -1,7 +1,7 @@
 #include "list.h"
 
 Node* InstantiateNode(){
-    Node* new_node = malloc(sizeof new_node);
+    Node* new_node = malloc(sizeof *new_node);
     new_node->prox = NULL;
     return new_node;
 }
@@ -16,7 +16,7 @@ int EmptyList(List list){
     return list.size == 0 ? 1 : 0;
 }
 List* InstantiateList(void){
-    List* new_list = malloc(sizeof new_list);
+    List* new_list = malloc(sizeof *new_list);
     new_list->head = NULL;
     new_list->size = 0;
     return new_list;
